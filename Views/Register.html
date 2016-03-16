@@ -1,0 +1,33 @@
+ <div class="col-md-6" >
+
+      <form name="form" >
+        <h2 class="form-signin-heading">Sign Up {{name}}</h2>
+         <input  name="email" type="email" class="form-control" placeholder="Email" ng-model="data.email" required />
+
+          <span ng-show="form.email.$dirty && form.email.$error.required">Required</span>
+         <span ng-show="form.email.$dirty && form.email.$error.email">Not Valid Email</span>
+
+        <input   name="user" class="form-control" placeholder="User" ng-model="data.user" required  />
+         
+
+        <input name="password" type="password" id="password" class="form-control" placeholder="Password"  ng-model="data.password" ng-minlength="3" required  />
+
+          <span ng-show="form.password.$dirty && form.password.$error.required">Required</span>
+           <span ng-show="form.password.$dirty && form.password.$error.minlength">Too short</span>
+
+
+        <input type="password" name="retypepassword" id="retypepassword" class="form-control" placeholder="Retype Password" ng-model="data.retypepassword" valid-password-c required />
+
+          <span ng-show="form.retypepassword.$dirty && form.retypepassword.$error.required">Required</span>
+            <span ng-show="form.retypepassword.$dirty && form.retypepassword.$error.noMatch">Password must match</span>
+
+
+        <button ng-disabled="form.$invalid"class="btn btn-lg btn-primary btn-block" ng-click="send(data)" type="submit">Register</button>
+
+        <span>{{status}}</span>
+      </form>
+ <a href="#/Users">users</a>
+
+
+
+    </div> 

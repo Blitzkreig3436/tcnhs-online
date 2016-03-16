@@ -1,0 +1,20 @@
+  <div class="col-md-6" >
+
+      <form >
+        <h2 class="form-signin-heading">Please sign in</h2>
+      
+        <input   class="form-control" placeholder="Username" ng-model="data.user" required >
+            <input type="password" class="form-control" placeholder="Password" ng-model="data.password" required>
+        
+        <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="send(data)" >Log in</button>
+           <div >
+                <label>
+            <span>{{status}}</span>
+          </label>
+          <label>
+            <a href="#/Register">Register</a>
+          </label>
+        </div>
+      </form>
+
+    </div>

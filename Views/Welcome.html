@@ -1,0 +1,65 @@
+
+                
+        <table class ="table"> 
+         
+   <thead>
+        <td> <input type="text" class="form-control" ng-model="subject.name" /> </td>
+        <td> <input type="text" class="form-control" ng-model="subject.code" /> </td>
+        <td> <input type="text" class="form-control" ng-model="subject.yearlevel" /> </td>
+        <td> <button ng-disabled="form.$invalid"class="btn btn-lg btn-primary btn-block" ng-click="send(subject)" type="submit">Add</button></td>
+      </thead>
+        </table>
+
+
+          <table class="table" >
+    <thead>
+      <tr>
+        <td> <b>Name</b></td>
+        <td><b>Code</b></td>
+        <td><b>Year Level</b></td>
+      </tr>
+    </thead>
+    <tbody>
+    
+      <tr  ng-repeat="subject in subjects | orderBy : 'yearlevel'" style="cursor: pointer;" ng-click="subjectschedule(subject) ">
+        <td>{{subject.name}}</td>
+        <td>{{subject.code}}</td>
+        <td>{{subject.yearlevel}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+        <span>{{code}} </span>
+          <table class ="table"> 
+         
+   <thead>
+        <td> <input type="text" class="form-control" ng-model="subsched.max"  /> </td>
+        <td> <input type="text" class="form-control" ng-model="subsched.schedule" /> </td>
+        <td> <input  class="btn btn-lg btn-primary btn-block" type="submit" value="submit" ng-click="sendsched(subsched)"/></td>
+  
+      </thead>
+        </table>
+
+            <table class="table" >
+    <thead>
+      <tr>
+        <td> <b>Code</b></td>
+        <td><b>Max Student</b></td>
+        <td><b>Schedule</b></td>
+      </tr>
+    </thead>
+    <tbody>
+    
+      <tr  ng-repeat="subjectschedule in subjectschedules" style="cursor: pointer;" ng-click="enroll(subjectschedule)" >
+        <td>{{subjectschedule.code}}</td>
+        <td>{{subjectschedule.max}}</td>
+        <td>{{subjectschedule.schedule}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+
+
+   <a href="#/Users">Users</a>
+              <button class="btn btn-danger" type="submit" ng-click="Logout()" >Log Out</button>

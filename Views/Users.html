@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>Users</h2>
+  <input type="text " class="form-control" ng-model="name" />        
+  <table class="table">
+    <thead>
+      <tr>
+        <td> <b>Firstname</b></td>
+        <td><b>Password</b></td>
+        <td><b>Email</b></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="data in users | filter : name">
+        <td>{{data.user}}</td>
+        <td>{{data.password}}</td>
+        <td>{{data.email}}</td>
+        <td><button class="btn btn-lg btn-primary" ng-click='send(data.user)'>Delete</button> </td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+  <a href="#/Register">Register</a>
+</div>
