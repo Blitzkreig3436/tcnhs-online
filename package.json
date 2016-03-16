@@ -1,5 +1,5 @@
 {
-  "name": "yurapp",
+  "name": "Enrollment",
   "main": "server.js",
   "version": "0.0.1",
     "scripts": {
@@ -16,7 +16,15 @@
     "nodemailer": "^2.2.1",
     "nodemailer-smtp-transport": "^2.4.1"
   },
-    "repository": {},
+    "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+    "repository": {
+      "type": "git",
+    "url": "https://github.com/karlotoy/Enrollment_node"
+      },
   "engines": {
     "node": "4.2.x"
   }
