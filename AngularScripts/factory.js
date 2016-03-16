@@ -7,7 +7,7 @@ angular.module('Factory',[])
     	console.log("Factore.Create is running");
        	console.log(data);
 
-       	return $http.post('http://localhost:8080/create',data)
+       	return $http.post('http://enrollmentnode.herokuapp.com/create',data)
  
             .success(function(data) {
             console.log(data);
@@ -21,7 +21,7 @@ angular.module('Factory',[])
 
     Get : function(){       
     	console.log('factory.get')
-            return $http.post('http://localhost:8080/users')  
+            return $http.post('http://enrollmentnode.herokuapp.com/users')  
             .success(function(res) {
             	console.log(res)
             	return res;
@@ -34,7 +34,7 @@ console.log('failure factory get')
           
    Authenticate : function(data){
         console.log("login factory running")
-        return $http.post('http://localhost:8080/Login', data)
+        return $http.post('http://enrollmentnode.herokuapp.com/Login', data)
         .success(function(res){
            if(res.success){
                 console.log('success cookie')
@@ -56,7 +56,7 @@ console.log('failure factory get')
     },
     CreateSubject  : function (subject) {
         console.log('CreateSubject factory running')
-        return $http.post('http://localhost:8080/createsubject', subject)
+        return $http.post('http://enrollmentnode.herokuapp.com/createsubject', subject)
         .success(function(res){
             console.log(res)
         })
@@ -66,7 +66,7 @@ console.log('failure factory get')
     },
     GetSubjects : function (){
         console.log('GetSubjects factory running')
-        return $http.post('http://localhost:8080/getsubjects')
+        return $http.post('http://enrollmentnode.herokuapp.com/getsubjects')
         .success(function(res){
             console.log(res)
             return res
@@ -78,7 +78,7 @@ console.log('failure factory get')
     SubjectsSchedule : function (subject){
         console.log('factory running')
         console.log(subject)
-              return $http.post('http://localhost:8080/getsubjectschedule', subject)
+              return $http.post('http://enrollmentnode.herokuapp.com/getsubjectschedule', subject)
         .success(function(res){
            console.log('factory success')
            return res
@@ -89,7 +89,7 @@ console.log('failure factory get')
     },
        CreateSubSched : function (subsched){
         console.log('subsched factory running')
-              return $http.post('http://localhost:8080/createsubjectschedule', subsched)
+              return $http.post('http://enrollmentnode.herokuapp.com/createsubjectschedule', subsched)
         .success(function(res){
             console.log(res)
             return res
